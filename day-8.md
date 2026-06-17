@@ -32,3 +32,5 @@ class Solution:
 ```
 
 Notes: passing 81/85 in Leetcode. `nums` was too large and my algorithm exceeded run time. First I was using `max` thinking it was messing with the algorithm so I used a conditional statement. However, the real problem is the while loop that's iterating through `num_set` again.
+
+Update: the problem was that I was iterating through the `nums` array itself. This means that I was checking duplicates several times and could take O(n^2) iterations in the worst case scenario. Instead, I iterated through the set and passed all the tests. This removed duplicate work and improved efficiency.
